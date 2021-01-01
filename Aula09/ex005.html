@@ -32,19 +32,29 @@
 
     // métodos de acesso:
     /*Marca -> GetElementsByTagName() - seleciona mais de um objeto por tags ex: <p> tem 2 no site acima*/
-    var p1 = window.document.getElementsByTagName('p')[0];
-    var corpo = window.document.body;
+    let p1 = window.document.getElementsByTagName('p')[0];
+    let corpo = window.document.body;
     window.document.write("</br></br>Está assim "+p1.innerHTML);
     p1.style.color = 'blue';
     corpo.style.background = 'black';
+
     /*ID, Name, Classe ->  GetElementById(),  GetElementByName(),  GetElementByClasse()*/
     /*var d = document.getElementById("msg");
     d.style.background = "green";
     d.innerText = "Aguardando..."*/
 
     /* Seletor*/
-    var d = window.document.querySelector('div#msg'); // "#" id , "." classe
+    let d = window.document.querySelector('div#msg'); // "#" id , "." classe - seleção atraves de elementos CSS
     d.style.background = "blue";
+
+    let p2 = document.getElementsByTagName('p')[1];
+    let a = 53, b = 48;
+    let res = a+b;
+    p2.innerText = 'Resultado = ' + parseInt(res);
+    if(res >=100)
+    p2.style.color = 'yellow';
+    else
+    p2.style.color = 'red';
 
         
 
