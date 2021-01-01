@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciando com o DOM</title>
+    <style>
+        body{
+
+            background: gray;
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1> Iniciando com DOM!!!  </h1> <!---Document Object Model-->
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <p>Aqui vai o resultado</p>
+    <div id="msg">Clique em mim</div>
+
+    
+    <script>
+    /*
+    //Árvore DOM do site acima
+    window
+    location document history ...
+    document-> html-> head(meta, tltle), body(h1,p,p(strong),div)
+    */
+
+        window.document.write('</br>' +  window.document.URL);
+
+    // métodos de acesso:
+    /*Marca -> GetElementsByTagName() - seleciona mais de um objeto por tags ex: <p> tem 2 no site acima*/
+    var p1 = window.document.getElementsByTagName('p')[0];
+    var corpo = window.document.body;
+    window.document.write("</br></br>Está assim "+p1.innerHTML);
+    p1.style.color = 'blue';
+    corpo.style.background = 'black';
+    /*ID, Name, Classe ->  GetElementById(),  GetElementByName(),  GetElementByClasse()*/
+    /*var d = document.getElementById("msg");
+    d.style.background = "green";
+    d.innerText = "Aguardando..."*/
+
+    /* Seletor*/
+    var d = window.document.querySelector('div#msg'); // "#" id , "." classe
+    d.style.background = "blue";
+
+        
+
+    </script>
+</body>
+</html>
