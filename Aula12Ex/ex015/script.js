@@ -29,7 +29,7 @@ function verificar() {
         tipoPessoa = "adolescente";
     else if (idade < 60) {
 
-        
+
         if (rsex[0].checked) {
             tipoPessoa = "adulto";
         }
@@ -47,7 +47,5 @@ function verificar() {
     }
 
     res.innerText = `Temos um${gênero}, ${tipoPessoa} de ${idade} anos de idade`;
-
-
 
 }
